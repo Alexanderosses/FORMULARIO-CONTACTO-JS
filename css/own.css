@@ -8,7 +8,14 @@
     --color5: #00eeff;
 }
 
-body{
+*{
+    font-size: 16px !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+    letter-spacing: 0px !important;
+}
+
+body,html{
+    line-height: 18px;
     display: flex;
     /*justify-content: center;*/
     flex-direction: column;
@@ -22,9 +29,7 @@ body{
     background-size: cover;
     margin: 0px;
     padding: 0px;
-    font-family: 'Nunito Sans', sans-serif;
     box-sizing: border-box;
-    font-size: 12px;
     overflow: auto;
 }
 
@@ -114,7 +119,7 @@ input{
 textarea{
     resize: vertical;
     min-height: 100px;
-    padding: 16px 8px;
+    padding: 8px 8px 0 16px !important;
     border-radius: 8px;
     color: var(--color1);
     font-size: 1rem;
@@ -136,7 +141,6 @@ input:focus,
 textarea:focus,
 textarea:active{
     color: var(--color1);
-    font-size: 1rem;
     outline: none;
     border-bottom: 4px solid var(--color5);
 }
