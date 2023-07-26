@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;1000&display=swap');
+
+:root{
+    --color1: #414141;
+    --color2: #585858;
+    --color3: #ffffff;
+    --color4: #c0c0c0;
+    --color5: #00eeff;
+}
+
+body{
+    display: flex;
+    /*justify-content: center;*/
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(45deg,rgba(0, 255, 255, 0.08), rgba(225, 0, 255, 0.08)), url(https://digitalassets.tesla.com/tesla-contents/image/upload/h_1285,w_1800,c_fit,f_auto,q_auto:best/Model-Y-Specs-Hero-Desktop-LHD);
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+    font-size: 12px;
+    overflow: auto;
+}
+
+.content{
+    margin-top: 4rem;
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
+    top: 6rem;
+}
+
+.content .box-header{
+    width: 100%;
+    min-height: 48px;
+    background-color: var(--color1);
+    border-radius: 8px 8px 0 0;
+    border: 1.5px solid rgba(57, 57, 57, 0.5);
+}
+
+.content .box-header .h1{
+    color: var(--color4);
+    padding: 0px 16px;
+    font-size: 1.5rem;
+}
+
+.content .box-content{
+    background: rgba(255, 255, 255, .2);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(57, 57, 57, 0.5);
+    border-radius: 0 0 8px 8px;
+    margin: 0 25px 25px 25px;
+    padding: 25px;
+    width: calc(100% - 50px);
+}
+
+.content .box-content .text-destacado{
+    color: #dddddd;
+    text-align: center;
+    display: block;
+    font-size: 1.2rem;
+    font-weight:600;
+    line-height: 24px;
+}
+
+.content .box-content .text-parrafo{
+    color: #dddddd;
+    text-align: center;
+    display: block;
+    border-bottom: 1px dashed var(--color4);
+    padding: 8px 0 16px 0;
+    margin: 0 0 25px 0;
+    font-size: 1rem;
+    font-weight:600;
+    line-height: 20px;
+}
+
+/* ///////// FORMULARIO INPUT /////////  */
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 !important;
+}
+
+label{
+    color: var(--color4);
+    font-size: 1rem;
+    font-weight:bold;
+    padding: 0 0 8px 6px;
+    display: block;
+}
+
+input{
+    height: 40px;
+    padding: 0 8px;
+    border-radius: 8px;
+    color: var(--color1);
+    font-size: 1rem;
+    padding: 0 8px 0 16px !important;
+    border-bottom: 4px solid var(--color3);
+}
+
+textarea{
+    resize: vertical;
+    min-height: 100px;
+    padding: 16px 8px;
+    border-radius: 8px;
+    color: var(--color1);
+    font-size: 1rem;
+    border-bottom: 4px solid var(--color3);
+}
+
+input::placeholder,
+textarea::placeholder{
+    color: var(--color2);    
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder{
+    color: var(--color3);
+}
+
+input:active,
+input:focus,
+textarea:focus,
+textarea:active{
+    color: var(--color1);
+    font-size: 1rem;
+    outline: none;
+    border-bottom: 4px solid var(--color5);
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.g-col-0{
+    margin: 0 -2% 0 -2% !important;
+}
+
+.g-col-1{
+    margin: 1% 2% !important;
+}
+
+.col-12{
+    width: 100%!important;
+}
+
+.col-6{
+    width: 46% !important;
+    margin: 0px;
+}
+
+.align-end{
+    display: flex;
+    flex-direction: row;
+    justify-content: end !important;
+    align-content: end;
+}
+
+.button{
+    width: 90px !important;
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: var(--color3);
+    text-align: center;
+    background-color: #2e56f6;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #2e56f6;
+    border-radius: 4px;
+}
+.button:hover{
+    background-color: #082bb4;
+    cursor: pointer;
+    border: 1px solid #082bb4;
+}
+
+
+ /* Extra small devices (phones, 600px and down) 
+ 320px — 480px: dispositivos móviles
+ 481px — 768px: iPads, tabletas
+ 769px — 1024px: pantallas pequeñas, portátiles
+ 1025px — 1200px: Computadoras de escritorio, pantallas grandes
+ 1201px y más —  Pantallas extra grandes, TV 
+
+ // `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { ... }
+*/
+
+@media (max-width: 576px) {
+    body{
+        display: flex;
+        /*justify-content: center;*/
+        flex-direction: column;
+        align-items: center;
+        width: 100vw !important;
+        height: 100vh;
+        background-image: linear-gradient(45deg,rgba(0, 255, 255, 0.08), rgba(225, 0, 255, 0.08)), url(https://digitalassets.tesla.com/tesla-contents/image/upload/h_1285,w_1800,c_fit,f_auto,q_auto:best/Model-Y-Specs-Hero-Desktop-LHD);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Nunito Sans', sans-serif;
+        box-sizing: border-box;
+        font-size: 12px;
+    }
+
+    .content .box-content{
+        background: rgba(255, 255, 255, .2);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border: 1.5px solid rgba(57, 57, 57, 0.5);
+        border-radius: 0 0 8px 8px;
+        margin: 0px 25px 25px 25px;
+        padding: 0 25px 25px 25px;
+        width: calc(100% - 50px);
+    }        
+
+    .content{
+        margin-top: 4rem;
+        width: 90vw !important;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
+        top: 6rem;
+    }
+
+    .form{
+        display: flex;
+    }
+
+    .col-6{
+        display: flex !important;
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    input{
+        height: 40px;
+        padding: 0 8px;
+        border-radius: 8px;
+        color: var(--color1);
+        font-size: 1rem;
+        padding: 0 8px 0 16px !important;
+        border-bottom: 4px solid var(--color3);
+    }
+    .button{
+        margin-top: 20px;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 1024px) {
+    body{
+        display: flex;
+        /*justify-content: center;*/
+        flex-direction: column;
+        align-items: center;
+        width: 100vw !important;
+        height: 100vh;
+        background-image: linear-gradient(45deg,rgba(0, 255, 255, 0.08), rgba(225, 0, 255, 0.08)), url(https://digitalassets.tesla.com/tesla-contents/image/upload/h_1285,w_1800,c_fit,f_auto,q_auto:best/Model-Y-Specs-Hero-Desktop-LHD);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Nunito Sans', sans-serif;
+        box-sizing: border-box;
+        font-size: 12px;
+    }
+
+    .content .box-content{
+        background: rgba(255, 255, 255, .2);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        border: 1.5px solid rgba(57, 57, 57, 0.5);
+        border-radius: 0 0 8px 8px;
+        margin: 0px 25px 25px 25px;
+        padding: 0 25px 25px 25px;
+        width: calc(100% - 50px);
+    }      
+
+    .content .box-header .h1{
+        color: var(--color4);
+        padding: 0px 16px;
+        font-size: 1.5rem;
+        line-height: 8px;
+    }  
+
+    .content{
+        margin-top: 4rem;
+        width: 70vw !important;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);  
+        top: 6rem;
+    }
+
+    .form{
+        display: flex;
+    }
+
+    .col-6{
+        display: flex !important;
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    input{
+        height: 40px;
+        padding: 0 8px;
+        border-radius: 8px;
+        color: var(--color1);
+        font-size: 1rem;
+        padding: 0 8px 0 16px !important;
+        border-bottom: 4px solid var(--color3);
+    }
+    .button{
+        margin-top: 20px;
+    }
+
+    .col-12{
+        width: 100%!important;
+    }
+    
+    .col-6{
+        width: 46% !important;
+    }
+
+}
