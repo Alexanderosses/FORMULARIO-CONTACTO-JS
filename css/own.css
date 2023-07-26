@@ -9,7 +9,6 @@
 }
 
 *{
-    font-size: 16px !important;
     font-family: 'Nunito Sans', sans-serif !important;
     letter-spacing: 0px !important;
 }
@@ -359,4 +358,25 @@ textarea:active{
         width: 46% !important;
     }
 
+}
+
+@media(min-width: 1024px){
+    body,html{
+        line-height: 18px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-image: linear-gradient(45deg,rgba(0, 255, 255, 0.08), rgba(225, 0, 255, 0.08)), url(https://digitalassets.tesla.com/tesla-contents/image/upload/h_1285,w_1800,c_fit,f_auto,q_auto:best/Model-Y-Specs-Hero-Desktop-LHD);
+        background-repeat: repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        overflow: auto;
+    }
 }
